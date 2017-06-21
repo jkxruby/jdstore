@@ -1,0 +1,13 @@
+<h1>详情</h1>
+<h1><%= @product.title %></h1>
+<br>
+<p>
+  <h3><%= simple_format(@product.description) %></h3>
+</p>
+<%= form_for @user, :html => {:multipart => true} do |f| %>
+  <p>
+    <label>My Image</label>
+    <%= f.file_field :image %>
+    <%= f.hidden_field :image_cache %>
+  </p>
+<% end %>
