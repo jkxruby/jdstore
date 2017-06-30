@@ -12,14 +12,14 @@ resources :products do
   end
 end
 
-resources :cart do
-  resources :cartitem do
+resources :carts do
+  resources :cart_items do
     member do
       post :product
       post :quantity
   end
 end
-end 
+end
 
 
 root 'products#index'
