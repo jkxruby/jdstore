@@ -13,12 +13,9 @@ resources :products do
 end
 
 resources :carts do
-  resources :cart_items do
-    member do
-      post :product
-      post :quantity
-  end
-end
+  collection do
+    delete :clean
+  end 
 end
 
 
