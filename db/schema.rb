@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20170702074754) do
     t.datetime "updated_at",                       null: false
     t.string   "token"
     t.boolean  "is_paid",          default: false
+    t.string   "payment_method"
   end
 
   create_table "product_lists", force: :cascade do |t|

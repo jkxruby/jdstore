@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+root 'products#index'
+
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
@@ -17,13 +20,14 @@ resources :carts do
     delete :clean
     post :checkout
   end
-end
 
-namespace :account do
-  resources :orders
+
+
 end
 
 resources :cart_items
+
+
 
 resources :orders do
   member do
@@ -32,6 +36,10 @@ resources :orders do
   end
 end
 
+namespace :account do
+  resources :orders
+end
 
-root 'products#index'
+
+
 end
