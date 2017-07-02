@@ -19,8 +19,12 @@ resources :carts do
   end
 end
 
+namespace :account do
+  resources :orders
+end 
+
 resources :cart_items
-resources :orders 
+resources :orders
 
 
 root 'products#index'
