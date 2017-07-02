@@ -36,6 +36,6 @@ def return
   @order.return_good!
   redirect_to :back
 end
-end
+
 
 end
