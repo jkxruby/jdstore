@@ -7,6 +7,7 @@ root 'products#index'
 
 namespace :admin do
   resources :products
+  resources :orders 
 end
 
 resources :products do
